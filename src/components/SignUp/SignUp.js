@@ -35,9 +35,9 @@ class SignUp extends Component {
         message: messages.signUpSuccess,
         variant: 'success'
       }))
-      .then(() => history.push('/'))
+      .then(() => history.push('/chat'))
       .catch(error => {
-        this.setState({ email: '', password: '', passwordConfirmation: '' })
+        this.setState({ email: '', username: '', password: '', passwordConfirmation: '' })
         msgAlert({
           heading: 'Sign Up Failed with error: ' + error.message,
           message: messages.signUpFailure,
@@ -55,7 +55,7 @@ class SignUp extends Component {
           <h3>Sign Up</h3>
           <Form onSubmit={this.onSignUp}>
             <Form.Group controlId="email">
-              <Form.Label>Email address</Form.Label>
+              <Form.Label>Email Address</Form.Label>
               <Form.Control
                 required
                 type="email"
@@ -75,6 +75,7 @@ class SignUp extends Component {
                 placeholder="Password"
                 onChange={this.handleChange}
               />
+
             </Form.Group>
             <Form.Group controlId="passwordConfirmation">
               <Form.Label>Password Confirmation</Form.Label>
@@ -88,12 +89,14 @@ class SignUp extends Component {
               />
             </Form.Group>
             <Button
-              variant="primary"
+              variant="outline-dark"
               type="submit"
             >
-              Submit
+              Sign Up
             </Button>
           </Form>
+          <br />
+          <p>Already have an account? <a href="#sign-in" className="sign-in-link">Sign In</a></p>
         </div>
       </div>
     )
