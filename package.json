@@ -1,6 +1,6 @@
 {
   "name": "notation-client",
-  "homepage": "https://shurukian.github.io/notation1",
+  "homepage": "https://shurukian.github.io/notation-client",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
