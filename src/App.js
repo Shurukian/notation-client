@@ -11,6 +11,7 @@ import SignOut from './components/SignOut/SignOut'
 import ChangePassword from './components/ChangePassword/ChangePassword'
 import LandingPage from './components/LandingPage/LandingPage'
 import FlashcardCreate from './components/FlashcardCreate/FlashcardCreate'
+import FlashcardIndex from './components/FlashcardIndex/FlashcardIndex'
 
 class App extends Component {
   constructor () {
@@ -72,8 +73,11 @@ class App extends Component {
               <ChangePassword msgAlert={this.msgAlert} user={user} />
             </Fragment>
           )} />
-          <AuthenticatedRoute user={user} path='/flashcards/' render={() => (
+          <AuthenticatedRoute user={user} exact path='/flashcards/' render={() => (
             <FlashcardCreate msgAlert={this.msgAlert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} path='/flashcards/index' render={({ match }) => (
+            <FlashcardIndex msgAlert={this.msgAlert} user={user} match={match} />
           )} />
         </main>
       </Fragment>

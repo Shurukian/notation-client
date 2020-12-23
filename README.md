@@ -19,7 +19,6 @@ Back-End
 * REST Framework
 * Git/GITHUB
 * Postman
-* AWS (image upload)
 
 ## User Stories
 

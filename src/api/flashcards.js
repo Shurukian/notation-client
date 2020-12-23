@@ -12,9 +12,12 @@ export const createFlashcards = (data, user) => {
   })
 }
 
-export const indexFlashcards = (data, user) => {
+export const indexFlashcards = (user) => {
   return axios({
     method: 'GET',
-    url: apiUrl + '/'
+    url: apiUrl + '/flashcards/',
+    headers: {
+      'Authorization': `Token ${user.token}`
+    }
   })
 }
