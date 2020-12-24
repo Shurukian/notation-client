@@ -2,7 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Overpass&display=swap');
 
 body {
+  background-color: #A8D0E6;
   font-family: 'sans-serif', sans-serif;
+  color: #343A40;
+}
+
+.show-card {
+  background-color: #24305E;
 }
 
 .card-deck {
@@ -25,18 +31,31 @@ body {
 }
 
 .my-navbar {
-  background-color: #AE8DAC;
+  background-color: yellow;
 }
 
 .sign-in-link,
 .sign-up-link,
 .sign-in-link:hover,
 .sign-up-link:hover {
-  color: #AE8DAC;
+  color: #374785;
 }
 
-.chat-board {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.card-body {
+  background-color: #374785;
+  color: white;
+}
+
+.card-footer{
+  background-color:#24305E;
+}
+
+.create-flashcard-button {
+  background-color: #F8E9A1;
+  color:#343A40;
+}
+
+.flashcard-button {
+  background-color: #F8E9A1;
+  color:#343A40;
 }

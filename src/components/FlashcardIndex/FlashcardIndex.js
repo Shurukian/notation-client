@@ -49,7 +49,7 @@ const FlashcardIndex = props => {
               </div>
               <div className="card-footer">
                 <Link to={`/flashcards-show/${flashcard.id}`}>
-                  <Button>Edit</Button>
+                  <Button className="btn btn-outline-dark flashcard-button">Edit</Button>
                 </Link>
                 <small className="text-muted"></small>
               </div>
@@ -60,7 +60,9 @@ const FlashcardIndex = props => {
               <br />
               <br />
               <br />
-              <Link to={'/flashcards/'}><p className="card-title"><Button className="btn btn-outline-primary">+</Button></p></Link>
+              <Link to={'/flashcards/'}><p className="card-title">
+                <Button className="btn btn-outline-dark flashcard-button">+</Button>
+              </p></Link>
             </div>
           </Link>
         </div>

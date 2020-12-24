@@ -80,7 +80,7 @@ const FlashcardUpdate = props => {
           onChange={handleUpdateChange}
           name="answer"
         />
-        <Button type="submit" className="update-flashcard-button">
+        <Button type="submit" className="flashcard-button update-flashcard-button">
           Update Flashcard
         </Button>
       </form>

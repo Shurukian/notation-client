@@ -3,6 +3,11 @@ An application for flashcards, completed with user authentication.
 
 ## Important Links
 
+[Front-end Repo](https://github.com/Shurukian/notation-client)
+[Front-end Deployed](https://shurukian.github.io/notation-client/#/)
+[Back-end Repo](https://github.com/Shurukian/notation-api)
+[Back-end Deployed](https://notation1.herokuapp.com/)
+
 ## Technologies Used
 
 Front-End
@@ -33,11 +38,11 @@ Back-End
 
 ## Wireframe and ERD
 
-[Landing Page](https://i.imgur.com/7Qym2Hd.png)
-[Logged in](https://i.imgur.com/xsW74Qx.png)
-[New Card](https://i.imgur.com/w4mJK3P.png)
-[Profile / Edit All](https://i.imgur.com/PNcEfi2.png)
+* [Landing Page](https://i.imgur.com/7Qym2Hd.png)
+* [Logged in](https://i.imgur.com/xsW74Qx.png)
+* [New Card](https://i.imgur.com/w4mJK3P.png)
+* [Profile / Edit All](https://i.imgur.com/PNcEfi2.png)
 
-[ERD](https://i.imgur.com/HgMhxVP.png)
+* [ERD](https://i.imgur.com/HgMhxVP.png)
 
 ## Planning and Development

@@ -60,16 +60,16 @@ const FlashcardShow = props => {
   return (
     <div className="row">
       {flashcard ? (
-        <div className="card border mb-3 col-12">
+        <div className="show-card card col-12">
           <div className="card-body">
             <h3 className="card-title">{flashcard.title}</h3>
             <h5 className="card-text">{flashcard.question}</h5>
             <p className="card-text">{flashcard.answer}</p>
           </div>
-          <div className="card-footer bg-transparent border-success">
+          <div className="card-footer bg-transparent border-dark">
             <Button variant="outline-danger" onClick={handleDelete}>Delete</Button>
             <Link to={`/flashcards-update/${flashcard.id}`}>
-              <Button>Update</Button>
+              <Button className="btn btn-outline-dark flashcard-button">Update</Button>
             </Link>
           </div>
         </div>
