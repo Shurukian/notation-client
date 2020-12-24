@@ -15,11 +15,11 @@ const LandingPage = props => {
   return (
     <div className="row">
       <div className="col-sm-10 col-md-8 mx-auto mt-5">
-        <p className='banner-text'><span className='brand-name'>notation</span> - Study like you mean it</p>
+        <p className='banner-text'><span className='brand-name'>notation</span> - Flip and learn</p>
         <img
           src={'https://i.imgur.com/B2dN8YU.jpg'}
           className='banner-img'
-          alt={'Study like you mean it'}
+          alt={'Flip and learn'}
         />
         <br /><hr />
         <Button variant="outline-dark" block onClick={signUp}>Sign Up</Button>

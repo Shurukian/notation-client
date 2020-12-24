@@ -21,3 +21,34 @@ export const indexFlashcards = (user) => {
     }
   })
 }
+
+export const showFlashcards = (user, id) => {
+  return axios({
+    method: 'GET',
+    url: apiUrl + '/flashcards/' + id,
+    headers: {
+      'Authorization': `Token ${user.token}`
+    }
+  })
+}
+
+export const updateFlashcards = (data, user, id) => {
+  return axios({
+    method: 'PATCH',
+    url: apiUrl + `/flashcards/${id}`,
+    headers: {
+      'Authorization': `Token ${user.token}`
+    },
+    data: data
+  })
+}
+
+export const deleteFlashcards = (user, id) => {
+  return axios({
+    method: 'DELETE',
+    url: apiUrl + '/flashcards/' + id,
+    headers: {
+      'Authorization': `Token ${user.token}`
+    }
+  })
+}

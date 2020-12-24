@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import { indexFlashcards } from '../../api/flashcards'
 import messages from '../AutoDismissAlert/messages'
 
+import Button from 'react-bootstrap/Button'
+
 const FlashcardIndex = props => {
   const [flashcardArray, setFlashcardArray] = useState(null)
 
@@ -39,20 +41,26 @@ const FlashcardIndex = props => {
       <React.Fragment>
         <div className="card-deck">
           {flashcardArray.map(flashcard => (
-            <div className="card"onCLick={() => props.history.push(`/flashcards/${flashcard.id}`)} key={flashcard.id}>
+            <div className="card" key={flashcard.id}>
               <div className="card-body">
                 <h3 className="card-title">{flashcard.title}</h3>
                 <h5 className="card-text">{flashcard.question}</h5>
                 <p className="card-text">{flashcard.answer}</p>
               </div>
               <div className="card-footer">
+                <Link to={`/flashcards-show/${flashcard.id}`}>
+                  <Button>Edit</Button>
+                </Link>
                 <small className="text-muted"></small>
               </div>
             </div>
           ))}
           <Link to={'/flashcards/'}>
             <div>
-              <p className="card-title"><button>New</button></p>
+              <br />
+              <br />
+              <br />
+              <Link to={'/flashcards/'}><p className="card-title"><Button className="btn btn-outline-primary">+</Button></p></Link>
             </div>
           </Link>
         </div>

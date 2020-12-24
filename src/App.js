@@ -12,6 +12,8 @@ import ChangePassword from './components/ChangePassword/ChangePassword'
 import LandingPage from './components/LandingPage/LandingPage'
 import FlashcardCreate from './components/FlashcardCreate/FlashcardCreate'
 import FlashcardIndex from './components/FlashcardIndex/FlashcardIndex'
+import FlashcardShow from './components/FlashcardShow/FlashcardShow'
+import FlashcardUpdate from './components/FlashcardUpdate/FlashcardUpdate'
 
 class App extends Component {
   constructor () {
@@ -76,8 +78,14 @@ class App extends Component {
           <AuthenticatedRoute user={user} exact path='/flashcards/' render={() => (
             <FlashcardCreate msgAlert={this.msgAlert} user={user} />
           )} />
-          <AuthenticatedRoute user={user} path='/flashcards/index' render={({ match }) => (
+          <AuthenticatedRoute user={user} exact path='/flashcards/index' render={({ match }) => (
             <FlashcardIndex msgAlert={this.msgAlert} user={user} match={match} />
+          )} />
+          <AuthenticatedRoute user={user} exact path='/flashcards-show/:id' render={({ match }) => (
+            <FlashcardShow msgAlert={this.msgAlert} user={user} match={match} />
+          )} />
+          <AuthenticatedRoute user={user} exact path='/flashcards-update/:id' render={({ match, history }) => (
+            <FlashcardUpdate msgAlert={this.msgAlert} user={user} match={match} history={history} />
           )} />
         </main>
       </Fragment>

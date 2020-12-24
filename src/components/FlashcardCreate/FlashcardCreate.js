@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
-import { Redirect } from 'react-router-dom'
+import { Redirect, Link } from 'react-router-dom'
 import { createFlashcards } from '../../api/flashcards'
+
+import Button from 'react-bootstrap/Button'
 
 const FlashcardCreate = props => {
   // Creating the useState for the Flashcard
@@ -67,9 +69,11 @@ const FlashcardCreate = props => {
           onChange={handleChange}
           name="answer"
         />
-        <button type="submit" className="create-flashcard-button">
-          Create Flashcard
-        </button>
+        <Link to={'/flashcards/'}>
+          <p className="card-title">
+            <Button type="submit" className="btn btn-outline-secondary create-flashcard-button">Created Flashcard</Button>
+          </p>
+        </Link>
       </form>
     </React.Fragment>
   )
