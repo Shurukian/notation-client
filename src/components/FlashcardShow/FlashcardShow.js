@@ -68,7 +68,7 @@ const FlashcardShow = props => {
           </div>
           <div className="card-footer bg-transparent border-dark">
             <Button variant="outline-danger" onClick={handleDelete}>Delete</Button>
-            <Link to={`/flashcards-update/${flashcard.id}`}>
+            <Link to={'/flashcards-update/' + flashcard.id}>
               <Button className="btn btn-outline-dark flashcard-button">Update</Button>
             </Link>
           </div>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Redirect, Link } from 'react-router-dom'
+import { Redirect } from 'react-router-dom'
 import { createFlashcards } from '../../api/flashcards'
 
 import Button from 'react-bootstrap/Button'
@@ -44,7 +44,7 @@ const FlashcardCreate = props => {
   }
 
   if (createdFlashcardId) {
-    return <Redirect to={`/flashcards/${createdFlashcardId}`} />
+    return <Redirect to={'/flashcards/index'} />
   }
 
   return (
@@ -57,23 +57,25 @@ const FlashcardCreate = props => {
           onChange={handleChange}
           name="title"
         />
-        <input
+        <br />
+        <br />
+        <textarea
           placeholder="Question"
           value={flashcard.question}
           onChange={handleChange}
           name="question"
         />
-        <input
+        <br />
+        <textarea
           placeholder="Answer"
           value={flashcard.answer}
           onChange={handleChange}
           name="answer"
         />
-        <Link to={'/flashcards/'}>
-          <p className="card-title">
-            <Button type="submit" className="btn btn-outline-secondary create-flashcard-button">Created Flashcard</Button>
-          </p>
-        </Link>
+        <br />
+        <p className="card-title">
+          <Button type="submit" className="btn btn-outline-secondary create-flashcard-button">Created Flashcard</Button>
+        </p>
       </form>
     </React.Fragment>
   )

@@ -35,7 +35,7 @@ export const showFlashcards = (user, id) => {
 export const updateFlashcards = (data, user, id) => {
   return axios({
     method: 'PATCH',
-    url: apiUrl + `/flashcards/${id}`,
+    url: apiUrl + `/flashcards/${id}/`,
     headers: {
       'Authorization': `Token ${user.token}`
     },

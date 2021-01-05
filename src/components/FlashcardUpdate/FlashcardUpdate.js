@@ -25,7 +25,7 @@ const FlashcardUpdate = props => {
   }, [])
 
   const handleUpdateChange = e => {
-    const updatedField = { [event.target.name]: event.target.value }
+    const updatedField = { [e.target.name]: e.target.value }
     setFlashcard(oldFlashcard => {
       const updatedFlashcard = { ...oldFlashcard, ...updatedField }
       return updatedFlashcard
@@ -34,7 +34,9 @@ const FlashcardUpdate = props => {
 
   const handleUpdateSubmit = e => {
     e.preventDefault()
-    updateFlashcards(user, flashcard, match.params.id)
+
+    updateFlashcards({ flashcard }, user, match.params.id)
+
       .then(() => setUpdated(true))
       .then(() => {
         return msgAlert({
@@ -68,18 +70,22 @@ const FlashcardUpdate = props => {
           onChange={handleUpdateChange}
           name="title"
         />
-        <input
+        <br />
+        <br />
+        <textarea
           placeholder="Question"
           value={flashcard.question}
           onChange={handleUpdateChange}
           name="question"
         />
-        <input
+        <br />
+        <textarea
           placeholder="Answer"
           value={flashcard.answer}
           onChange={handleUpdateChange}
           name="answer"
         />
+        <br />
         <Button type="submit" className="flashcard-button update-flashcard-button">
           Update Flashcard
         </Button>

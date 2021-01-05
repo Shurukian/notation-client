@@ -35,7 +35,7 @@ class SignUp extends Component {
         message: messages.signUpSuccess,
         variant: 'success'
       }))
-      .then(() => history.push('/chat'))
+      .then(() => history.push('/flashcards/'))
       .catch(error => {
         this.setState({ email: '', username: '', password: '', passwordConfirmation: '' })
         msgAlert({
