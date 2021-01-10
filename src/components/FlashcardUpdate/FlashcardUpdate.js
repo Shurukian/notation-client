@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Redirect } from 'react-router-dom'
+import { Redirect, Link } from 'react-router-dom'
 import { showFlashcards, updateFlashcards } from '../../api/flashcards'
 
 import Button from 'react-bootstrap/Button'
@@ -86,9 +86,11 @@ const FlashcardUpdate = props => {
           name="answer"
         />
         <br />
-        <Button type="submit" className="flashcard-button update-flashcard-button">
-          Update Flashcard
-        </Button>
+        <Link to={'/flashcards/index'}>
+          <Button type="submit" className="flashcard-button update-flashcard-button">
+            Update Flashcard
+          </Button>
+        </Link>
       </form>
     </React.Fragment>
   )
