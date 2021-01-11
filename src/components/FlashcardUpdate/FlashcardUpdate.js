@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import { Redirect, Link } from 'react-router-dom'
+import { Redirect } from 'react-router-dom'
 import { showFlashcards, updateFlashcards } from '../../api/flashcards'
 
-import Button from 'react-bootstrap/Button'
+// import Button from 'react-bootstrap/Button'
 
 const FlashcardUpdate = props => {
   const [flashcard, setFlashcard] = useState({ title: '', question: '', answer: '' })
@@ -56,7 +56,7 @@ const FlashcardUpdate = props => {
 
   if (updated) {
     return (
-      <Redirect to={`/flashcards/${match.params.id}`} />
+      <Redirect to={'/flashcards/index'} />
     )
   }
 
@@ -86,11 +86,9 @@ const FlashcardUpdate = props => {
           name="answer"
         />
         <br />
-        <Link to={'/flashcards/index'}>
-          <Button type="submit" className="flashcard-button update-flashcard-button">
+        <button type="submit" className="flashcard-button update-flashcard-button">
             Update Flashcard
-          </Button>
-        </Link>
+        </button>
       </form>
     </React.Fragment>
   )
